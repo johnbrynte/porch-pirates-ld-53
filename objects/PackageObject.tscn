@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://j3xwrogi0tg6"]
+
+[ext_resource type="Script" path="res://scripts/ProjectileScript.gd" id="1_08koy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rl57m"]
+size = Vector3(1, 0.6, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhgf4"]
+albedo_color = Color(1, 0.654902, 0.298039, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f81ya"]
+size = Vector3(1, 0.6, 0.8)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_08koy")
+
+[node name="model" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29212, 0)
+mesh = SubResource("BoxMesh_rl57m")
+surface_material_override/0 = SubResource("StandardMaterial3D_xhgf4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.298599, 0)
+shape = SubResource("BoxShape3D_f81ya")

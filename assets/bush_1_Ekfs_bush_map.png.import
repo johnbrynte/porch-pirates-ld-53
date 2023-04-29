@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3y7kk7jdiuu6"
-path.s3tc="res://.godot/imported/test_texture.png-ea2f3f55bbc7cb286e3bfdd7733f0492.s3tc.ctex"
+uid="uid://b0epxq4uqy4ru"
+path.s3tc="res://.godot/imported/bush_1_Ekfs_bush_map.png-a7ed46358d9d2de86190f26040147e19.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/test_texture.png"
-dest_files=["res://.godot/imported/test_texture.png-ea2f3f55bbc7cb286e3bfdd7733f0492.s3tc.ctex"]
+source_file="res://assets/bush_1_Ekfs_bush_map.png"
+dest_files=["res://.godot/imported/bush_1_Ekfs_bush_map.png-a7ed46358d9d2de86190f26040147e19.s3tc.ctex"]
 
 [params]
 
