@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://casj7444rj5vl"]
+
+[ext_resource type="Script" path="res://scripts/ProjectileScript.gd" id="1_i2mnr"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_061x2"]
+bounce = 0.15
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_36qgx"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_t2dc2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghn5r"]
+albedo_color = Color(1, 0.34902, 1, 1)
+
+[node name="Projectile" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_061x2")
+gravity_scale = 2.66454e-15
+script = ExtResource("1_i2mnr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_36qgx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_t2dc2")
+surface_material_override/0 = SubResource("StandardMaterial3D_ghn5r")
