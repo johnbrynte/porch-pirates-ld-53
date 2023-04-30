@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgg44artt2k5m"]
+
+[ext_resource type="Script" path="res://scripts/WayPointScript.gd" id="1_ae1xy"]
+[ext_resource type="Shader" uid="uid://b5hl105es16kq" path="res://shaders/WayPoint.tres" id="2_dix78"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hxpca"]
+render_priority = 0
+shader = ExtResource("2_dix78")
+shader_parameter/Color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_peqxu"]
+material = SubResource("ShaderMaterial_hxpca")
+radial_segments = 4
+rings = 1
+
+[node name="WayPoint" type="Node3D"]
+script = ExtResource("1_ae1xy")
+
+[node name="Model" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.783409, 0)
+mesh = SubResource("SphereMesh_peqxu")

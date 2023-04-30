@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3elrfvcsqyx5"]
+
+[ext_resource type="Script" path="res://scripts/PedestrianScript.gd" id="1_7sqkr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0hr4p"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_000bi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_82rfx"]
+albedo_color = Color(0.231373, 0.529412, 1, 1)
+
+[node name="Pedestrian" type="CharacterBody3D"]
+script = ExtResource("1_7sqkr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_0hr4p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_000bi")
+surface_material_override/0 = SubResource("StandardMaterial3D_82rfx")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
