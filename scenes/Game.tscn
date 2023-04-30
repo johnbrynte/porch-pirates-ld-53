@@ -273,3 +273,15 @@ neighbor1 = NodePath("../WayPoint2")
 
 [node name="Pedestrian" parent="." instance=ExtResource("9_dwfl6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -1)
+
+[node name="Pedestrian2" parent="." instance=ExtResource("9_dwfl6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -1)
+
+[node name="Pedestrian3" parent="." instance=ExtResource("9_dwfl6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2068, 0, -1.99817)
+
+[node name="Pedestrian4" parent="." instance=ExtResource("9_dwfl6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7887, 0, -2.32969)
+
+[node name="Pedestrian5" parent="." instance=ExtResource("9_dwfl6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0775, 0, -0.475363)

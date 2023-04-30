@@ -10,6 +10,8 @@
 albedo_color = Color(0.231373, 0.529412, 1, 1)
 
 [node name="Pedestrian" type="CharacterBody3D"]
+collision_layer = 8
+collision_mask = 3
 script = ExtResource("1_7sqkr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -22,3 +24,4 @@ mesh = SubResource("CapsuleMesh_000bi")
 surface_material_override/0 = SubResource("StandardMaterial3D_82rfx")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true

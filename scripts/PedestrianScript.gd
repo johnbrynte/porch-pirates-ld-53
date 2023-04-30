@@ -1,19 +1,24 @@
 extends CharacterBody3D
 
-@export var movement_speed: float = 4.0
+var movement_speed: float = 4.0
 @onready var navigation_agent: NavigationAgent3D = get_node("NavigationAgent3D")
 
 var previous_way_point: Node3D = null
 var target_way_point: Node3D = null
 
+var rand = RandomNumberGenerator.new()
+
 func _ready() -> void:
+	rand.randomize()
+	movement_speed = rand.randf_range(2.0, 4.0)
+
 	navigation_agent.velocity_computed.connect(Callable(_on_velocity_computed))
 	
 	find_next_target()
 
 func find_next_target():
 	var way_points = get_tree().get_nodes_in_group("Street")
-	print(way_points)
+
 	if way_points.size() > 0:
 		set_movement_target(way_points[0])
 

@@ -42,5 +42,4 @@ func _set_type(new_type: WayPointType):
 	for group in WayPointType:
 		remove_from_group(group)
 	add_to_group(WayPointType.keys()[type])
-	print("add to group %s" % WayPointType.keys()[type])
 	$Model.get_active_material(0).set_shader_parameter("Color", type_colors[new_type])
